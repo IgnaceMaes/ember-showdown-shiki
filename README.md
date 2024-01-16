@@ -5,7 +5,7 @@ ember-showdown-shikiji is a drop-in addon that automatically adds [Shikiji](http
 This addon also provides filename wrappers to the code block if a code block is marked with a `data-filename` attribute:
 
 ```markdown
-````gjs {data-filename=app/templates/blog-post.gjs}
+````gjs {data-filename=app/components/blog-post.gjs}
 <template>
   <h1>{{@model.title}}</h1>
   <h2>by {{@model.author}}</h2>

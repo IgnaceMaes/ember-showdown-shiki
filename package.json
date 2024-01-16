@@ -12,7 +12,8 @@
     "start:addon": "pnpm --filter ember-showdown-shikiji start --no-watch.clearScreen",
     "start:test-app": "pnpm --filter test-app start",
     "test": "pnpm --filter '*' test",
-    "test:ember": "pnpm --filter '*' test:ember"
+    "test:ember": "pnpm --filter '*' test:ember",
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",

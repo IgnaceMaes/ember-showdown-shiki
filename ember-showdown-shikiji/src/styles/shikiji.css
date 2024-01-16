@@ -1,0 +1,66 @@
+:root {
+  --code-background-color: #24292e;
+  --code-line-numbers-color: rgb(115 138 148 / 40%);
+  --spacing-1_5: 0.75rem;
+}
+
+pre.shiki {
+  border-radius: var(--radius-lg);
+}
+
+.shiki code {
+  overflow-x: auto;
+  display: block;
+  padding: var(--spacing-1_5) 0;
+}
+
+.shiki .line {
+  padding: 0 var(--spacing-2);
+}
+
+.filename {
+  padding: var(--spacing-1_5) var(--spacing-2);
+  background-color: var(--code-background-color);
+  color: var(--color-gray-300);
+  border-top-right-radius: var(--radius-lg);
+  border-top-left-radius: var(--radius-lg);
+  font-family: var(--font-family-mono);
+  border-bottom: 1px solid var(--code-line-numbers-color);
+}
+
+.filename + pre {
+  margin-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.line-numbers {
+  counter-reset: step;
+  counter-increment: step 0;
+}
+
+code.line-numbers .line::before {
+  content: counter(step);
+  counter-increment: step;
+  width: 1em;
+  margin-right: var(--spacing-2);
+  display: inline-block;
+  text-align: right;
+  color: var(--code-line-numbers-color);
+}
+
+/* Line highlighting */
+.shiki .line.remove {
+  background-color: rgba(244, 63, 94, .16);
+  opacity: 0.8;
+}
+
+.shiki .line.add {
+  background-color: rgba(16, 185, 129, .16);
+}
+
+.shiki code > .line {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: 100%;
+}

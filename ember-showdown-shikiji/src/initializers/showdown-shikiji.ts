@@ -85,6 +85,9 @@ function transformCodeBlock(
   codeblock = codeblock.replace(/\n+$/g, ''); // trim trailing whitespace
 
   const { language, attributes } = extractCodeBlockHeader(languageBlock);
+  const shikijiLanguage = Object.keys(bundledLanguages).includes(language)
+    ? language
+    : 'text';
 
   const diffInfoArgs = attributes['data-diff']?.split(',');
   if (diffInfoArgs) {
@@ -92,19 +95,19 @@ function transformCodeBlock(
   }
 
   codeblock = highlighter.codeToHtml(codeblock, {
-    lang: language,
+    lang: shikijiLanguage,
     theme: 'github-dark',
     transformers: [transformerNotationDiff()],
   });
   codeblock = codeblock.replace(
     '<code>',
-    `<code class="language-${language} line-numbers">`,
+    `<code class="language-${shikijiLanguage} line-numbers">`,
   );
   codeblock = `${codeblock}${end}`;
 
   if (attributes['data-filename']) {
     const fileName = attributes['data-filename'] ?? '';
-    codeblock = `<div><div class="filename ${language}">${fileName}</div>${codeblock}</div>`;
+    codeblock = `<div><div class="filename ${shikijiLanguage}">${fileName}</div>${codeblock}</div>`;
   }
   const codeblockHashed = showdown.subParser('hashBlock')(
     codeblock,

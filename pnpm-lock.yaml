@@ -130,8 +130,8 @@ importers:
         specifier: ^4.0.6
         version: 4.0.6(@babel/core@7.23.6)
       '@types/showdown':
-        specifier: ^1.9.1
-        version: 1.9.1
+        specifier: ^2.0.6
+        version: 2.0.6
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.14.0
         version: 6.14.0(@typescript-eslint/parser@6.14.0)(eslint@8.56.0)(typescript@5.3.3)
@@ -3344,8 +3344,8 @@ packages:
       '@types/node': 20.10.6
     dev: true
 
-  /@types/showdown@1.9.1:
-    resolution: {integrity: sha512-a5cUg+mxXz3GQTfB9+Cmombyoz/L5N0cou9XHg50LH2GgxHLnPXKphf7jzIFUhZWAGrJ5PdUpWZDejChM0iOMw==}
+  /@types/showdown@2.0.6:
+    resolution: {integrity: sha512-pTvD/0CIeqe4x23+YJWlX2gArHa8G0J0Oh6GKaVXV7TAeickpkkZiNOgFcFcmLQ5lB/K0qBJL1FtRYltBfbGCQ==}
     dev: true
 
   /@types/symlink-or-copy@1.2.2:

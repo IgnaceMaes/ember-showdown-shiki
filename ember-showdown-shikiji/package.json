@@ -3,11 +3,14 @@
   "version": "0.0.0",
   "description": "The default blueprint for Embroider v2 addons.",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "shikiji",
+    "showdown",
+    "empress"
   ],
-  "repository": "",
+  "repository": "https://github.com/IgnaceMaes/ember-showdown-shikiji.git",
   "license": "MIT",
-  "author": "",
+  "author": "Ignace Maes (https://ignacemaes.com/)",
   "exports": {
     ".": {
       "types": "./declarations/index.d.ts",

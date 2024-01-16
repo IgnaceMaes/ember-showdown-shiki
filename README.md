@@ -41,7 +41,19 @@ ember install ember-showdown-shikiji
 
 ## Usage
 
-Most people don't need to do anything to configure this addon as it comes with a sensible set of default languages that it supports.
+When running this addon in Fastboot you have to configure the environment to make the globals used by Shikiji available. To do this, create a `config/fastboot.js` with the following contents:
+
+```js
+module.exports = function () {
+  return {
+    buildSandboxGlobals(defaultGlobals) {
+      return Object.assign({}, defaultGlobals, {
+        atob: atob,
+      });
+    },
+  };
+};
+```
 
 ## Contributing
 

@@ -32,6 +32,8 @@ This addon is inspired by the great work of [ember-showdown-prism](https://githu
 
 - Ember.js v4.8 or above
 - Embroider or ember-auto-import v2
+- Fastboot v4 or above
+- Prember v2 or above
 
 ## Installation
 

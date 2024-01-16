@@ -4,6 +4,8 @@ import showdown from 'showdown';
 import { bundledLanguages, getHighlighter } from 'shikiji';
 import { transformerNotationDiff } from 'shikiji-transformers';
 
+import '../styles/shikiji.css';
+
 const CODE_BLOCK_REGEX =
   /(?:^|\n)(?: {0,3})(```+|~~~+)(?: *)([^\n`~]*)\n([\s\S]*?)\n(?: {0,3})\1/g;
 

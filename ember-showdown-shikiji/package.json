@@ -21,7 +21,7 @@
       "default": "./dist/*.js"
     },
     "./addon-main.js": "./addon-main.cjs",
-    "./shikiji.css": "./dist/shikiji.css"
+    "./styles/shikiji.css": "./dist/styles/shikiji.css"
   },
   "typesVersions": {
     "*": {

@@ -1,7 +1,7 @@
 {
   "name": "ember-showdown-shikiji",
   "version": "0.0.0",
-  "description": "The default blueprint for Embroider v2 addons.",
+  "description": "Adds shikiji syntax highlighting for showdown-based markdown code blocks.",
   "keywords": [
     "ember-addon",
     "shikiji",

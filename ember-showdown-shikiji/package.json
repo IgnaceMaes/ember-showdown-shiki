@@ -54,7 +54,8 @@
   "dependencies": {
     "@embroider/addon-shim": "^1.8.7",
     "decorator-transforms": "^1.0.1",
-    "shikiji": "^0.9.19"
+    "shikiji": "^0.9.19",
+    "shikiji-transformers": "^0.9.19"
   },
   "devDependencies": {
     "@babel/core": "^7.23.6",

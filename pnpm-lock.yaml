@@ -32,6 +32,9 @@ importers:
       shikiji:
         specifier: ^0.9.19
         version: 0.9.19
+      shikiji-transformers:
+        specifier: ^0.9.19
+        version: 0.9.19
     devDependencies:
       '@babel/core':
         specifier: ^7.23.6
@@ -11451,6 +11454,12 @@ packages:
 
   /shikiji-core@0.9.19:
     resolution: {integrity: sha512-AFJu/vcNT21t0e6YrfadZ+9q86gvPum6iywRyt1OtIPjPFe25RQnYJyxHQPMLKCCWA992TPxmEmbNcOZCAJclw==}
+    dev: false
+
+  /shikiji-transformers@0.9.19:
+    resolution: {integrity: sha512-lGLI7Z8frQrIBbhZ74/eiJtxMoCQRbpaHEB+gcfvdIy+ZFaAtXncJGnc52932/UET+Y4GyKtwwC/vjWUCp+c/Q==}
+    dependencies:
+      shikiji: 0.9.19
     dev: false
 
   /shikiji@0.9.19:

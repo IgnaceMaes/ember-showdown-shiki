@@ -12,7 +12,7 @@ const CODE_BLOCK_REGEX =
 
 async function initializeShikiji() {
   const highlighter = await getHighlighter({
-    themes: ['github-dark'],
+    themes: ['dark-plus'],
     langs: [glimmerHandlebarsGrammar, ...Object.keys(bundledLanguages)],
   });
 
@@ -97,7 +97,7 @@ function transformCodeBlock(
 
   codeblock = highlighter.codeToHtml(codeblock, {
     lang: shikijiLanguage,
-    theme: 'github-dark',
+    theme: 'dark-plus',
     transformers: [transformerNotationDiff()],
   });
   codeblock = codeblock.replace(

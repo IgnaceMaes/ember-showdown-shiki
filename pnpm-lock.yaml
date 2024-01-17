@@ -345,6 +345,9 @@ importers:
       ember-cli-inject-live-reload:
         specifier: ^2.1.0
         version: 2.1.0
+      ember-cli-showdown:
+        specifier: ^7.0.0
+        version: 7.0.0(@glint/template@1.2.1)(ember-source@5.5.0)(webpack@5.89.0)
       ember-cli-sri:
         specifier: ^2.1.1
         version: 2.1.1
@@ -6578,6 +6581,23 @@ packages:
       debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /ember-cli-showdown@7.0.0(@glint/template@1.2.1)(ember-source@5.5.0)(webpack@5.89.0):
+    resolution: {integrity: sha512-xpmqv+pSK1hMG50CD8DqClS0uEyTGF+jE1c/32otiZTslDMcISQC1xysdtdx2RHC+Uu0EpiS+WGp0oDznrH+WA==}
+    engines: {node: 14.* || 16.* || >= 18}
+    peerDependencies:
+      ember-source: ^3.12.0 || >4.0.0
+    dependencies:
+      ember-auto-import: 2.7.0(@glint/template@1.2.1)(webpack@5.89.0)
+      ember-cli-babel: 7.26.11
+      ember-cli-htmlbars: 6.3.0
+      ember-source: 5.5.0(@babel/core@7.23.6)(@glimmer/component@1.1.2)(@glint/template@1.2.1)(rsvp@4.8.5)(webpack@5.89.0)
+      showdown: 1.9.1
+    transitivePeerDependencies:
+      - '@glint/template'
+      - supports-color
+      - webpack
     dev: true
 
   /ember-cli-sri@2.1.1:

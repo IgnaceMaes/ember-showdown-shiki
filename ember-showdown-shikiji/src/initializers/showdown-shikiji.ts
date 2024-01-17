@@ -5,6 +5,7 @@ import { bundledLanguages, getHighlighter } from 'shikiji';
 import { transformerNotationDiff } from 'shikiji-transformers';
 
 import '../styles/shikiji.css';
+import { glimmerHandlebarsGrammar } from '../glimmer-handlebars-grammar.ts';
 
 const CODE_BLOCK_REGEX =
   /(?:^|\n)(?: {0,3})(```+|~~~+)(?: *)([^\n`~]*)\n([\s\S]*?)\n(?: {0,3})\1/g;
@@ -12,7 +13,7 @@ const CODE_BLOCK_REGEX =
 async function initializeShikiji() {
   const highlighter = await getHighlighter({
     themes: ['github-dark'],
-    langs: Object.keys(bundledLanguages),
+    langs: [glimmerHandlebarsGrammar, ...Object.keys(bundledLanguages)],
   });
 
   return highlighter;

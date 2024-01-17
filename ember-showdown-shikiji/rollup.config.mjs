@@ -25,6 +25,7 @@ export default {
       '**/*.js',
       'index.js',
       'template-registry.js',
+      'glimmer-handlebars-grammar.js',
     ]),
 
     // These are the modules that should get reexported into the traditional

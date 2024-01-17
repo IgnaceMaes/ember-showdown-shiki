@@ -1,6 +1,6 @@
 :root {
   --code-background-color: #24292e;
-  --code-line-numbers-color: rgb(115 138 148 / 40%);
+  --code-line-numbers-color: rgb(115 138 148 / 60%);
   --spacing-1_5: 0.75rem;
 }
 

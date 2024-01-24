@@ -15,7 +15,7 @@ let myElement = $('.my-element');
 
 It even supports template tag components via `gjs` or `gts`:
 
-```gjs
+```gjs {data-filename=app/components/hello.gjs}
 import { on } from '@ember/modifier';
 import FancyButton from './fancy-button';
 function greet() {

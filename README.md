@@ -58,6 +58,25 @@ module.exports = function () {
 };
 ```
 
+### Configuration
+
+In `config/environment.js` you can configure the following options:
+
+```js
+module.exports = function (environment) {
+  const ENV = {
+    // Other options ...
+    'ember-showdown-shikiji': {
+      theme: 'github-dark', // The theme to use for highlighting
+      languages: ['javascript', 'handlebars'], // The languages to highlight
+    },
+  };
+  return ENV;
+};
+```
+
+By default the theme used is `dark-plus` and all languages are loaded.
+
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.

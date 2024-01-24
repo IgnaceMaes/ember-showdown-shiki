@@ -10,10 +10,10 @@ import { glimmerHandlebarsGrammar } from '../glimmer-handlebars-grammar.ts';
 const CODE_BLOCK_REGEX =
   /(?:^|\n)(?: {0,3})(```+|~~~+)(?: *)([^\n`~]*)\n([\s\S]*?)\n(?: {0,3})\1/g;
 
-async function initializeShikiji() {
+async function initializeShikiji(theme: string, languages: string[]) {
   const highlighter = await getHighlighter({
-    themes: ['dark-plus'],
-    langs: [glimmerHandlebarsGrammar, ...Object.keys(bundledLanguages)],
+    themes: [theme],
+    langs: [glimmerHandlebarsGrammar, ...languages],
   });
 
   return highlighter;
@@ -86,7 +86,7 @@ function transformCodeBlock(
   codeblock = codeblock.replace(/\n+$/g, ''); // trim trailing whitespace
 
   const { language, attributes } = extractCodeBlockHeader(languageBlock);
-  const shikijiLanguage = Object.keys(bundledLanguages).includes(language)
+  const shikijiLanguage = highlighter.getLoadedLanguages().includes(language)
     ? language
     : 'text';
 
@@ -97,7 +97,7 @@ function transformCodeBlock(
 
   codeblock = highlighter.codeToHtml(codeblock, {
     lang: shikijiLanguage,
-    theme: 'dark-plus',
+    theme: highlighter.getLoadedThemes()[0]!,
     transformers: [transformerNotationDiff()],
   });
   codeblock = codeblock.replace(
@@ -132,7 +132,13 @@ function transformCodeBlock(
 
 export async function initialize(application: Application) {
   application.deferReadiness();
-  const highlighter = await initializeShikiji();
+
+  const config = application.resolveRegistration('config:environment') as {
+    'ember-showdown-shikiji'?: { theme?: string; languages?: string[] };
+  };
+  const { theme = 'dark-plus', languages = Object.keys(bundledLanguages) } =
+    config['ember-showdown-shikiji'] ?? {};
+  const highlighter = await initializeShikiji(theme, languages);
 
   showdown.subParser('githubCodeBlocks', function (text, options, globals) {
     // Early exit if option is not enabled

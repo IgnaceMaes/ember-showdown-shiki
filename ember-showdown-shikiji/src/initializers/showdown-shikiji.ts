@@ -97,7 +97,7 @@ function transformCodeBlock(
 
   codeblock = highlighter.codeToHtml(codeblock, {
     lang: shikijiLanguage,
-    theme: 'dark-plus',
+    theme: highlighter.getLoadedThemes()[0]!,
     transformers: [transformerNotationDiff()],
   });
   codeblock = codeblock.replace(

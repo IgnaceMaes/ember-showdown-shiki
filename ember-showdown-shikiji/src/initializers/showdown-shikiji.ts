@@ -86,7 +86,7 @@ function transformCodeBlock(
   codeblock = codeblock.replace(/\n+$/g, ''); // trim trailing whitespace
 
   const { language, attributes } = extractCodeBlockHeader(languageBlock);
-  const shikijiLanguage = Object.keys(bundledLanguages).includes(language)
+  const shikijiLanguage = highlighter.getLoadedLanguages().includes(language)
     ? language
     : 'text';
 

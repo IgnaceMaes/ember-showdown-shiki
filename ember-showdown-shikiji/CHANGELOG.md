@@ -1,5 +1,13 @@
 # ember-showdown-shikiji
 
+## 0.3.0
+
+### Minor Changes
+
+- [#6](https://github.com/IgnaceMaes/ember-showdown-shikiji/pull/6) [`83581dd`](https://github.com/IgnaceMaes/ember-showdown-shikiji/commit/83581dde5c0dd20d60e3badb1c51415535fab07e) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - feat: add ribbons
+
+- [#8](https://github.com/IgnaceMaes/ember-showdown-shikiji/pull/8) [`40486cc`](https://github.com/IgnaceMaes/ember-showdown-shikiji/commit/40486ccf6f9a64afbd998a6cb421732827f6a628) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - feat: add theme and language config options
+
 ## 0.2.0
 
 ### Minor Changes

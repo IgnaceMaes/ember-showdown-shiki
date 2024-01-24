@@ -1,7 +1,8 @@
 :root {
-  --code-background-color: #1E1E1E;
+  --code-background-color: #1e1e1e;
   --code-line-numbers-color: rgb(115 138 148 / 60%);
   --spacing-1_5: 0.75rem;
+  --ribbon-indent: var(--spacing-1);
 }
 
 pre.shiki {
@@ -19,6 +20,7 @@ pre.shiki {
 }
 
 .filename {
+  position: relative;
   padding: var(--spacing-1_5) var(--spacing-2);
   background-color: var(--code-background-color);
   color: var(--color-gray-300);
@@ -49,14 +51,78 @@ code.line-numbers .line::before {
   color: var(--code-line-numbers-color);
 }
 
+/* Ribbons */
+.filename.javascript::after,
+.filename.js::after,
+.filename.glimmer-js::after,
+.filename.gjs::after,
+.filename.typescript::after,
+.filename.ts::after,
+.filename.glimmer-ts::after,
+.filename.gts::after,
+.filename.handlebars::after,
+.filename.hbs::after {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: var(--radius-lg);
+  bottom: var(--radius-lg);
+  right: 0;
+  padding-left: var(--spacing-3);
+  padding-right: var(--spacing-2);
+  color: var(--code-background-color);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-3);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 calc(100%),
+    var(--ribbon-indent) 50%,
+    0 0
+  );
+}
+
+.filename.javascript::after,
+.filename.js::after {
+  content: 'JS';
+  background-color: #f5e090;
+}
+
+.filename.typescript::after,
+.filename.ts::after {
+  content: 'TS';
+  background-color: #8fc2f5;
+}
+
+.filename.glimmer-js::after,
+.filename.gjs::after {
+  content: 'GJS';
+  background-color: #f5e090;
+}
+
+.filename.glimmer-ts::after,
+.filename.gts::after {
+  content: 'GTS';
+  background-color: #8fc2f5;
+}
+
+.filename.handlebars::after,
+.filename.hbs::after {
+  content: 'HBS';
+  background-color: #c3f590;
+}
+
 /* Line highlighting */
 .shiki .line.remove {
-  background-color: rgba(244, 63, 94, .16);
+  background-color: rgba(244, 63, 94, 0.16);
   opacity: 0.8;
 }
 
 .shiki .line.add {
-  background-color: rgba(16, 185, 129, .16);
+  background-color: rgba(16, 185, 129, 0.16);
 }
 
 .shiki code > .line {

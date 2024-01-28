@@ -34,6 +34,9 @@ pre.shiki {
     Menlo,
     monospace;
   border-bottom: 1px solid var(--code-line-numbers-color);
+  word-break: break-all;
+  display: flex;
+  justify-content: space-between;
 }
 
 .filename + pre {
@@ -58,23 +61,15 @@ code.line-numbers .line::before {
 }
 
 /* Ribbons */
-.filename.javascript::after,
-.filename.js::after,
-.filename.glimmer-js::after,
-.filename.gjs::after,
-.filename.typescript::after,
-.filename.ts::after,
-.filename.glimmer-ts::after,
-.filename.gts::after,
-.filename.handlebars::after,
-.filename.hbs::after {
-  position: absolute;
+.filename::after {
+  position: relative;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 0.625rem;
-  bottom: 0.625rem;
-  right: 0;
+  margin-top: -0.125rem;
+  margin-bottom: -0.125rem;
+  right: -1rem;
   padding-left: 1.5rem;
   padding-right: 1rem;
   color: var(--code-background-color);

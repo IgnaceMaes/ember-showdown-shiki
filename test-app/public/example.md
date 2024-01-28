@@ -27,6 +27,13 @@ function greet() {
 </template>
 ```
 
+Adding a `javascript` as a language to get syntax highlighting
+```gts {data-filename=app/components/deeply/nested/so/it/overflows/example.gts}
+<template>
+  <p>Hello world!</p>
+</template>
+```
+
 Now let's do something a bit more complex
 
 ```handlebars {data-filename=app/templates/blog-post.hbs}

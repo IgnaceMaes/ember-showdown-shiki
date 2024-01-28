@@ -1,5 +1,11 @@
 # ember-showdown-shiki
 
+## 0.5.0
+
+### Minor Changes
+
+- [#14](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/14) [`ca5bac1`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/ca5bac11db9b63e71c8fc601cf8c44570989205b) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - refactor: replace shikiji with shiki
+
 ## 0.4.0
 
 ### Minor Changes

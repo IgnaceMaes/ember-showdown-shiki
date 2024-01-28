@@ -1,5 +1,15 @@
 # ember-showdown-shikiji
 
+## 0.4.0
+
+### Minor Changes
+
+- [#10](https://github.com/IgnaceMaes/ember-showdown-shikiji/pull/10) [`bd89f44`](https://github.com/IgnaceMaes/ember-showdown-shikiji/commit/bd89f4486b6b1d6ce11d9cafd7e0107a43a020df) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - refactor: remove ember-styleguide dependency
+
+### Patch Changes
+
+- [#12](https://github.com/IgnaceMaes/ember-showdown-shikiji/pull/12) [`dec13da`](https://github.com/IgnaceMaes/ember-showdown-shikiji/commit/dec13daa20b0e8917e0d935607f8c8457fcf3b85) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - fix: wrap filename on overflow
+
 ## 0.3.0
 
 ### Minor Changes

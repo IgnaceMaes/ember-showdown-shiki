@@ -6,7 +6,7 @@ module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     'ember-cli-babel': { enableTypeScriptTransform: true },
     autoImport: {
-      watchDependencies: ['ember-showdown-shikiji'],
+      watchDependencies: ['ember-showdown-shiki'],
     },
   });
 

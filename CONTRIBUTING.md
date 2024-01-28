@@ -3,7 +3,7 @@
 ## Installation
 
 - `git clone <repository-url>`
-- `cd ember-showdown-shikiji`
+- `cd ember-showdown-shiki`
 - `pnpm install`
 
 ## Linting
@@ -13,7 +13,7 @@
 
 ## Building the addon
 
-- `cd ember-showdown-shikiji`
+- `cd ember-showdown-shiki`
 - `pnpm build`
 
 ## Running tests

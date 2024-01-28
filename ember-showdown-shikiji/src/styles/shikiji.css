@@ -59,16 +59,7 @@ code.line-numbers .line::before {
 }
 
 /* Ribbons */
-.filename.javascript::after,
-.filename.js::after,
-.filename.glimmer-js::after,
-.filename.gjs::after,
-.filename.typescript::after,
-.filename.ts::after,
-.filename.glimmer-ts::after,
-.filename.gts::after,
-.filename.handlebars::after,
-.filename.hbs::after {
+.filename::after {
   position: absolute;
   display: flex;
   align-items: center;

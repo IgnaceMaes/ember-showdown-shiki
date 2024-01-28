@@ -1,5 +1,15 @@
 # ember-showdown-shiki
 
+## 1.0.0
+
+### Major Changes
+
+- [#17](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/17) [`93862a7`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/93862a77232876b58b9ba805ca240990ec1591d5) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - declare stable release
+
+### Patch Changes
+
+- [#16](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/16) [`85f262d`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/85f262de0b07d8b3dcb5714ab93d4909f2781673) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - deps: carrot deps
+
 ## 0.5.0
 
 ### Minor Changes

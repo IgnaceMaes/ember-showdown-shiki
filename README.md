@@ -1,6 +1,6 @@
-# ember-showdown-shikiji
+# ember-showdown-shiki
 
-ember-showdown-shikiji is a drop-in addon that automatically adds [Shikiji](https://shikiji.netlify.app/) syntax highlighting to code blocks if you are using [showdown](https://github.com/showdownjs/showdown) to render your Markdown.
+ember-showdown-shiki is a drop-in addon that automatically adds [Shiki](https://shiki.netlify.app/) syntax highlighting to code blocks if you are using [showdown](https://github.com/showdownjs/showdown) to render your Markdown.
 
 This addon also provides filename wrappers to the code block if a code block is marked with a `data-filename` attribute:
 
@@ -39,12 +39,12 @@ This addon is inspired by the great work of [ember-showdown-prism](https://githu
 ## Installation
 
 ```
-ember install ember-showdown-shikiji
+ember install ember-showdown-shiki
 ```
 
 ## Usage
 
-When running this addon in Fastboot you have to configure the environment to make the globals used by Shikiji available. To do this, create a `config/fastboot.js` with the following contents:
+When running this addon in Fastboot you have to configure the environment to make the globals used by Shiki available. To do this, create a `config/fastboot.js` with the following contents:
 
 ```js
 module.exports = function () {
@@ -66,7 +66,7 @@ In `config/environment.js` you can configure the following options:
 module.exports = function (environment) {
   const ENV = {
     // Other options ...
-    'ember-showdown-shikiji': {
+    'ember-showdown-shiki': {
       theme: 'github-dark', // The theme to use for highlighting
       languages: ['javascript', 'handlebars'], // The languages to highlight
     },

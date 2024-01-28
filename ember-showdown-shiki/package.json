@@ -1,14 +1,14 @@
 {
-  "name": "ember-showdown-shikiji",
+  "name": "ember-showdown-shiki",
   "version": "0.4.0",
-  "description": "Adds Shikiji syntax highlighting for showdown-based markdown code blocks.",
+  "description": "Adds Shiki syntax highlighting for showdown-based markdown code blocks.",
   "keywords": [
     "ember-addon",
-    "shikiji",
+    "shiki",
     "showdown",
     "empress"
   ],
-  "repository": "https://github.com/IgnaceMaes/ember-showdown-shikiji.git",
+  "repository": "https://github.com/IgnaceMaes/ember-showdown-shiki.git",
   "license": "MIT",
   "author": "Ignace Maes (https://ignacemaes.com/)",
   "exports": {
@@ -21,7 +21,7 @@
       "default": "./dist/*.js"
     },
     "./addon-main.js": "./addon-main.cjs",
-    "./styles/shikiji.css": "./dist/styles/shikiji.css"
+    "./styles/shiki.css": "./dist/styles/shiki.css"
   },
   "typesVersions": {
     "*": {
@@ -123,7 +123,7 @@
     "type": "addon",
     "main": "addon-main.cjs",
     "app-js": {
-      "./initializers/showdown-shikiji.js": "./dist/_app_/initializers/showdown-shikiji.js"
+      "./initializers/showdown-shiki.js": "./dist/_app_/initializers/showdown-shiki.js"
     }
   }
 }

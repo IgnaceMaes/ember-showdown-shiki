@@ -27,7 +27,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.0(prettier@3.1.1)
 
-  ember-showdown-shikiji:
+  ember-showdown-shiki:
     dependencies:
       '@embroider/addon-shim':
         specifier: ^1.8.7
@@ -372,9 +372,9 @@ importers:
       ember-resolver:
         specifier: ^11.0.1
         version: 11.0.1(ember-source@5.5.0)
-      ember-showdown-shikiji:
+      ember-showdown-shiki:
         specifier: workspace:*
-        version: link:../ember-showdown-shikiji
+        version: link:../ember-showdown-shiki
       ember-source:
         specifier: ~5.5.0
         version: 5.5.0(@babel/core@7.23.6)(@glimmer/component@1.1.2)(@glint/template@1.2.1)(rsvp@4.8.5)(webpack@5.89.0)

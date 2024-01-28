@@ -1,8 +1,8 @@
 import Application from '@ember/application';
 
 import showdown from 'showdown';
-import { bundledLanguages, getHighlighter } from 'shikiji';
-import { transformerNotationDiff } from 'shikiji-transformers';
+import { bundledLanguages, getHighlighter } from 'shiki';
+import { transformerNotationDiff } from '@shikijs/transformers';
 
 import '../styles/shikiji.css';
 import { glimmerHandlebarsGrammar } from '../glimmer-handlebars-grammar.ts';

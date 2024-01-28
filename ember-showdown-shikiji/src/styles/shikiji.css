@@ -34,6 +34,7 @@ pre.shiki {
     Menlo,
     monospace;
   border-bottom: 1px solid var(--code-line-numbers-color);
+  word-break: break-all;
 }
 
 .filename + pre {

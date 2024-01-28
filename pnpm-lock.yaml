@@ -33,13 +33,13 @@ importers:
         specifier: ^1.8.7
         version: 1.8.7
       '@shikijs/transformers':
-        specifier: v1.0.0-beta.0
+        specifier: ^v1.0.0-beta.0
         version: 1.0.0-beta.0
       decorator-transforms:
         specifier: ^1.0.1
         version: 1.0.1(@babel/core@7.23.6)
       shiki:
-        specifier: v1.0.0-beta.0
+        specifier: ^v1.0.0-beta.0
         version: 1.0.0-beta.0
     devDependencies:
       '@babel/core':

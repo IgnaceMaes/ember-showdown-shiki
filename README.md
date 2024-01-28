@@ -1,6 +1,6 @@
 # ember-showdown-shiki
 
-ember-showdown-shiki is a drop-in addon that automatically adds [Shiki](https://shiki.netlify.app/) syntax highlighting to code blocks if you are using [showdown](https://github.com/showdownjs/showdown) to render your Markdown.
+ember-showdown-shiki is a drop-in addon that automatically adds [Shiki](https://github.com/shikijs/shiki) syntax highlighting to code blocks if you are using [showdown](https://github.com/showdownjs/showdown) to render your Markdown.
 
 This addon also provides filename wrappers to the code block if a code block is marked with a `data-filename` attribute:
 

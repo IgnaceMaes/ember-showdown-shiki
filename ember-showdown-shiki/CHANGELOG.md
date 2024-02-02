@@ -1,5 +1,11 @@
 # ember-showdown-shiki
 
+## 1.0.1
+
+### Patch Changes
+
+- [#19](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/19) [`9b6aeeb`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/9b6aeebab13a350d45cb6c5b96f12c4efc07ebc5) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - style: make filename background solid
+
 ## 1.0.0
 
 ### Major Changes

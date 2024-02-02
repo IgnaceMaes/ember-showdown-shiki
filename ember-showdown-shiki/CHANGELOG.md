@@ -1,5 +1,13 @@
 # ember-showdown-shiki
 
+## 1.0.3
+
+### Patch Changes
+
+- [#24](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/24) [`139ecd5`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/139ecd54f7581256fd95395f97e04f6c1f524a2f) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - chore: align css var names
+
+- [#23](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/23) [`15e8e52`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/15e8e52a7c67def56345dd946ca60722c2b542ab) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - style: fix ribbon text color
+
 ## 1.0.2
 
 ### Patch Changes

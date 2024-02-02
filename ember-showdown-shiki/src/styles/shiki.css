@@ -2,6 +2,7 @@
   --code-background-color: #1e1e1e;
   --code-line-numbers-color: rgb(115 138 148 / 60%);
   --ribbon-indent: 0.5rem;
+  --diff-border-width: 0.4rem;
 }
 
 pre.shiki {
@@ -118,11 +119,15 @@ code.line-numbers .line::before {
 /* Line highlighting */
 .shiki .line.remove {
   background-color: rgba(244, 63, 94, 0.16);
+  border-left: var(--diff-border-width) solid rgba(244, 63, 94, 0.5);
+  padding: 0 calc(1rem - var(--diff-border-width));
   opacity: 0.8;
 }
 
 .shiki .line.add {
   background-color: rgba(16, 185, 129, 0.16);
+  border-left: var(--diff-border-width) solid rgba(16, 185, 129, 0.5);
+  padding: 0 calc(1rem - var(--diff-border-width));
 }
 
 .shiki code > .line {

@@ -1,8 +1,8 @@
 :root {
-  --code-background-color: #1e1e1e;
   --code-line-numbers-color: rgb(115 138 148 / 60%);
   --ribbon-indent: 0.5rem;
   --diff-border-width: 0.4rem;
+  --filename-background-color: #292929;
 }
 
 pre.shiki {
@@ -24,7 +24,7 @@ pre.shiki {
 .filename {
   position: relative;
   padding: 0.75rem 1rem;
-  background-color: #292929;
+  background-color: var(--filename-background-color);
   color: #dce0e6;
   border-top-right-radius: 0.625rem;
   border-top-left-radius: 0.625rem;
@@ -72,7 +72,7 @@ code.line-numbers .line::before {
   right: -1rem;
   padding-left: 1.5rem;
   padding-right: 1rem;
-  color: var(--code-background-color);
+  color: var(--filename-background-color);
   font-size: 0.875rem;
   font-weight: 600;
   clip-path: polygon(

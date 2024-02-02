@@ -119,15 +119,15 @@ code.line-numbers .line::before {
 /* Line highlighting */
 .shiki .line.remove {
   background-color: rgba(244, 63, 94, 0.16);
-  border-left: var(--diff-border-width) solid rgba(244, 63, 94, 0.5);
-  padding: 0 calc(1rem - var(--diff-border-width));
+  border-left: var(--shiki-diff-border-width) solid rgba(244, 63, 94, 0.5);
+  padding: 0 calc(1rem - var(--shiki-diff-border-width));
   opacity: 0.8;
 }
 
 .shiki .line.add {
   background-color: rgba(16, 185, 129, 0.16);
-  border-left: var(--diff-border-width) solid rgba(16, 185, 129, 0.5);
-  padding: 0 calc(1rem - var(--diff-border-width));
+  border-left: var(--shiki-diff-border-width) solid rgba(16, 185, 129, 0.5);
+  padding: 0 calc(1rem - var(--shiki-diff-border-width));
 }
 
 .shiki code > .line {

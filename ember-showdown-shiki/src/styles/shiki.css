@@ -23,7 +23,7 @@ pre.shiki {
 .filename {
   position: relative;
   padding: 0.75rem 1rem;
-  background-color: var(--code-background-color);
+  background-color: #292929;
   color: #dce0e6;
   border-top-right-radius: 0.625rem;
   border-top-left-radius: 0.625rem;
@@ -33,7 +33,6 @@ pre.shiki {
     Liberation Mono,
     Menlo,
     monospace;
-  border-bottom: 1px solid var(--code-line-numbers-color);
   word-break: break-all;
   display: flex;
   justify-content: space-between;

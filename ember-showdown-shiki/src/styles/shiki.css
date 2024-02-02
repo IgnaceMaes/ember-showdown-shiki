@@ -1,8 +1,8 @@
 :root {
-  --code-line-numbers-color: rgb(115 138 148 / 60%);
-  --ribbon-indent: 0.5rem;
-  --diff-border-width: 0.4rem;
-  --filename-background-color: #292929;
+  --shiki-line-numbers-color: rgb(115 138 148 / 60%);
+  --shiki-ribbon-indent: 0.5rem;
+  --shiki-diff-border-width: 0.4rem;
+  --shiki-filename-background-color: #292929;
 }
 
 pre.shiki {
@@ -24,7 +24,7 @@ pre.shiki {
 .filename {
   position: relative;
   padding: 0.75rem 1rem;
-  background-color: var(--filename-background-color);
+  background-color: var(--shiki-filename-background-color);
   color: #dce0e6;
   border-top-right-radius: 0.625rem;
   border-top-left-radius: 0.625rem;
@@ -57,7 +57,7 @@ code.line-numbers .line::before {
   margin-right: 1rem;
   display: inline-block;
   text-align: right;
-  color: var(--code-line-numbers-color);
+  color: var(--shiki-line-numbers-color);
 }
 
 /* Ribbons */
@@ -72,7 +72,7 @@ code.line-numbers .line::before {
   right: -1rem;
   padding-left: 1.5rem;
   padding-right: 1rem;
-  color: var(--filename-background-color);
+  color: var(--shiki-filename-background-color);
   font-size: 0.875rem;
   font-weight: 600;
   clip-path: polygon(
@@ -81,7 +81,7 @@ code.line-numbers .line::before {
     100% 100%,
     0 100%,
     0 calc(100%),
-    var(--ribbon-indent) 50%,
+    var(--shiki-ribbon-indent) 50%,
     0 0
   );
 }

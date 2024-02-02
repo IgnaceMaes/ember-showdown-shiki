@@ -1,5 +1,11 @@
 # ember-showdown-shiki
 
+## 1.0.2
+
+### Patch Changes
+
+- [#21](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/21) [`186a3d6`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/186a3d63180854b7a07a58b523116b73f63bf388) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - style: add diff borders
+
 ## 1.0.1
 
 ### Patch Changes

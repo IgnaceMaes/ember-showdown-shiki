@@ -1,5 +1,11 @@
 # ember-showdown-shiki
 
+## 1.0.4
+
+### Patch Changes
+
+- [#26](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/26) [`1ddade1`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/1ddade124781304713417a60e04889c67f095c15) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - deps: upgrade to shiki v1 stable
+
 ## 1.0.3
 
 ### Patch Changes

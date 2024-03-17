@@ -136,7 +136,7 @@ export async function initialize(application: Application) {
   const config = application.resolveRegistration('config:environment') as {
     'ember-showdown-shiki'?: { theme?: string; languages?: string[] };
   };
-  const { theme = 'dark-plus', languages = Object.keys(bundledLanguages) } =
+  const { theme = 'github-dark', languages = Object.keys(bundledLanguages) } =
     config['ember-showdown-shiki'] ?? {};
   const highlighter = await initializeShiki(theme, languages);
 

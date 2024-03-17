@@ -75,7 +75,7 @@ module.exports = function (environment) {
 };
 ```
 
-By default the theme used is `dark-plus` and all languages are loaded.
+By default the theme used is `github-dark` and all languages are loaded.
 
 ## Contributing
 

@@ -90,6 +90,13 @@ function transformCodeBlock(
     ? language
     : 'text';
 
+  if (shikiLanguage !== 'text') {
+    // Restore dollar signs & tremas temporarily so Prism won't highlight this
+    // See https://github.com/showdownjs/showdown/blob/a9f38b6f057284460d6447371f3dc5dea999c0a6/src/converter.js#L285 for more info
+    codeblock = codeblock.replace(/¨D/g, '$$');
+    codeblock = codeblock.replace(/¨T/g, '¨');
+  }
+
   const diffInfoArgs = attributes['data-diff']?.split(',');
   if (diffInfoArgs) {
     codeblock = addDiffInfo(codeblock, diffInfoArgs);

@@ -1,5 +1,11 @@
 # ember-showdown-shiki
 
+## 1.0.6
+
+### Patch Changes
+
+- [#32](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/32) [`bac2162`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/bac216229b0edcee2fa80d7dea556112e7f7d227) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - fix: escape highlighting dollar and trema signs
+
 ## 1.0.5
 
 ### Patch Changes

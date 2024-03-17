@@ -1,5 +1,11 @@
 # ember-showdown-shiki
 
+## 1.1.0
+
+### Minor Changes
+
+- [#34](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/34) [`34290ec`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/34290ec37a9158c6794b7e4fb2a371af2aae83d2) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - feat: use Glimmer-flavoured handlebars grammar from vsc-ember-syntax
+
 ## 1.0.6
 
 ### Patch Changes

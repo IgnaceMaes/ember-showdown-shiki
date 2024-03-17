@@ -1,5 +1,13 @@
 # ember-showdown-shiki
 
+## 1.0.5
+
+### Patch Changes
+
+- [#30](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/30) [`8afed62`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/8afed625c97061caa8381899bbb84c4aa6df36c2) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - style: change default theme to 'github-dark'. This is a breaking change in theory, but as no consumers are in production yet this is included as patch. To keep the previoud behaviour, set the 'theme' option in environment.js to 'dark-plus'.
+
+- [#29](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/29) [`e9a7604`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/e9a7604501b34eb677013f5aad1a73441fd32ac2) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - deps: bump shiki to v1.2.0
+
 ## 1.0.4
 
 ### Patch Changes

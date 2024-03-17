@@ -1,11 +1,11 @@
 import Application from '@ember/application';
 
 import showdown from 'showdown';
-import { bundledLanguages, getHighlighter } from 'shiki';
+import { bundledLanguages, getHighlighter, type LanguageInput } from 'shiki';
 import { transformerNotationDiff } from '@shikijs/transformers';
 
 import '../styles/shiki.css';
-import { glimmerHandlebarsGrammar } from '../glimmer-handlebars-grammar.ts';
+import GlimmerHandlebarsGrammar from '../glimmer-handlebars-grammar.ts';
 
 const CODE_BLOCK_REGEX =
   /(?:^|\n)(?: {0,3})(```+|~~~+)(?: *)([^\n`~]*)\n([\s\S]*?)\n(?: {0,3})\1/g;
@@ -13,7 +13,7 @@ const CODE_BLOCK_REGEX =
 async function initializeShiki(theme: string, languages: string[]) {
   const highlighter = await getHighlighter({
     themes: [theme],
-    langs: [glimmerHandlebarsGrammar, ...languages],
+    langs: [GlimmerHandlebarsGrammar as unknown as LanguageInput, ...languages],
   });
 
   return highlighter;

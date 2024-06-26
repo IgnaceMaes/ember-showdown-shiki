@@ -1,7 +1,12 @@
 import Application from '@ember/application';
 
 import showdown from 'showdown';
-import { bundledLanguages, getHighlighter, type LanguageInput } from 'shiki';
+import {
+  bundledLanguages,
+  createHighlighter,
+  type LanguageInput,
+  type ShikiTransformer,
+} from 'shiki';
 import { transformerNotationDiff } from '@shikijs/transformers';
 
 import '../styles/shiki.css';
@@ -10,8 +15,29 @@ import GlimmerHandlebarsGrammar from '../glimmer-handlebars-grammar.ts';
 const CODE_BLOCK_REGEX =
   /(?:^|\n)(?: {0,3})(```+|~~~+)(?: *)([^\n`~]*)\n([\s\S]*?)\n(?: {0,3})\1/g;
 
+/**
+ * Creates a Shiki transformer that applies color replacements on the style attribute.
+ * @param colorReplacements The color replacements to apply.
+ * @returns The Shiki transformer.
+ */
+function colorReplacementOnStyle(
+  colorReplacements: Record<string, string>,
+): ShikiTransformer {
+  return {
+    pre(hast: Parameters<NonNullable<ShikiTransformer['pre']>>[0]) {
+      Object.entries(colorReplacements).forEach(([from, to]) => {
+        if (hast.properties['style']) {
+          hast.properties['style'] = (
+            hast.properties['style'] as string
+          ).replace(from, to);
+        }
+      });
+    },
+  };
+}
+
 async function initializeShiki(theme: string, languages: string[]) {
-  const highlighter = await getHighlighter({
+  const highlighter = await createHighlighter({
     themes: [theme],
     langs: [GlimmerHandlebarsGrammar as unknown as LanguageInput, ...languages],
   });
@@ -76,9 +102,10 @@ function transformCodeBlock(
   wholeMatch: string,
   languageBlock: string,
   inputCodeblock: string,
-  highlighter: Awaited<ReturnType<typeof getHighlighter>>,
+  highlighter: Awaited<ReturnType<typeof createHighlighter>>,
   options: showdown.ShowdownOptions,
   globals: { ghCodeBlocks: unknown[] },
+  colorReplacements: Record<string, string>,
 ) {
   const end = options.omitExtraWLInCodeBlocks ? '' : '\n';
   let codeblock = showdown.subParser('detab')(inputCodeblock, options, globals);
@@ -105,7 +132,11 @@ function transformCodeBlock(
   codeblock = highlighter.codeToHtml(codeblock, {
     lang: shikiLanguage,
     theme: highlighter.getLoadedThemes()[0]!,
-    transformers: [transformerNotationDiff()],
+    transformers: [
+      transformerNotationDiff(),
+      colorReplacementOnStyle(colorReplacements),
+    ],
+    colorReplacements,
   });
   codeblock = codeblock.replace(
     '<code>',
@@ -141,10 +172,23 @@ export async function initialize(application: Application) {
   application.deferReadiness();
 
   const config = application.resolveRegistration('config:environment') as {
-    'ember-showdown-shiki'?: { theme?: string; languages?: string[] };
+    'ember-showdown-shiki'?: {
+      theme?: string;
+      languages?: string[];
+      colorReplacements?: Record<string, string>;
+    };
   };
-  const { theme = 'github-dark', languages = Object.keys(bundledLanguages) } =
-    config['ember-showdown-shiki'] ?? {};
+
+  const defaultColorReplacements = {
+    '#24292e': '#1c1e24', // Use color-gray-900 for the code block background
+    '#6a737d': '#7e8791', // Lighten comment color to be AA compliant
+  };
+
+  const {
+    theme = 'github-dark',
+    languages = Object.keys(bundledLanguages),
+    colorReplacements = defaultColorReplacements,
+  } = config['ember-showdown-shiki'] ?? {};
   const highlighter = await initializeShiki(theme, languages);
 
   showdown.subParser('githubCodeBlocks', function (text, options, globals) {
@@ -177,6 +221,7 @@ export async function initialize(application: Application) {
           highlighter,
           options,
           globals,
+          colorReplacements,
         ),
     );
 

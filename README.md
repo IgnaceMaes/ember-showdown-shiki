@@ -69,6 +69,9 @@ module.exports = function (environment) {
     'ember-showdown-shiki': {
       theme: 'github-dark', // The theme to use for highlighting
       languages: ['javascript', 'handlebars'], // The languages to highlight
+      colorReplacements: {
+        '#24292e': '#1c1e24',
+      }, // A map of colors to replace in the theme (see https://shiki.style/guide/theme-colors#color-replacements)
     },
   };
   return ENV;

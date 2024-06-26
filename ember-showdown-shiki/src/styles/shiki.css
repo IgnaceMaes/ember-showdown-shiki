@@ -2,7 +2,7 @@
   --shiki-line-numbers-color: rgb(115 138 148 / 60%);
   --shiki-ribbon-indent: 0.5rem;
   --shiki-diff-border-width: 0.4rem;
-  --shiki-filename-background-color: #292929;
+  --shiki-filename-background-color: #2b2d34; /* Use color-gray-800 from the Ember Styleguide */
 }
 
 pre.shiki {

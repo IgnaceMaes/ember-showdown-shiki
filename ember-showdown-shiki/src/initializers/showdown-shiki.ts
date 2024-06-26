@@ -181,6 +181,7 @@ export async function initialize(application: Application) {
 
   const defaultColorReplacements = {
     '#24292e': '#1c1e24', // Use color-gray-900 for the code block background
+    '#6a737d': '#7e8791', // Lighten comment color to be AA compliant
   };
 
   const {

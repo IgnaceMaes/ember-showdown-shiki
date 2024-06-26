@@ -1,5 +1,13 @@
 # ember-showdown-shiki
 
+## 1.2.0
+
+### Minor Changes
+
+- [#36](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/36) [`cb828d2`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/cb828d2ebce7242f57f33ab1d344e7d7051d9496) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - deps: upgrade shiki
+
+- [#39](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/39) [`a686227`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/a686227aefbc69ee05a1f678973073e517397b84) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - feat: introduce colorReplacements option and set AA compliant defaults
+
 ## 1.1.0
 
 ### Minor Changes

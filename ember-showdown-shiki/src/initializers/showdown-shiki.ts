@@ -15,6 +15,8 @@ import GlimmerHandlebarsGrammar from '../glimmer-handlebars-grammar.ts';
 const CODE_BLOCK_REGEX =
   /(?:^|\n)(?: {0,3})(```+|~~~+)(?: *)([^\n`~]*)\n([\s\S]*?)\n(?: {0,3})\1/g;
 
+const EMPTY_LINE_DIFF_PLACEHOLDER = 'EMPTY_LINE_DIFF_PLACEHOLDER';
+
 /**
  * Creates a Shiki transformer that applies color replacements on the style attribute.
  * @param colorReplacements The color replacements to apply.
@@ -87,7 +89,15 @@ function addDiffInfo(codeblock: string, diffInfoArgs: string[]) {
     const operator = diffInfoArg[0];
     if (operator !== undefined) {
       const lineNo = +diffInfoArg.replace(operator, '');
-      const text = lines[lineNo - 1];
+      /**
+       * The Shiki notation diff transform leaves out empty lines. To work around this issue,
+       * we replace empty lines with a placeholder and then add the diff notation.
+       * See tracking issue: https://github.com/shikijs/shiki/issues/589
+       */
+      const text =
+        lines[lineNo - 1] === ''
+          ? EMPTY_LINE_DIFF_PLACEHOLDER
+          : lines[lineNo - 1];
       if (operator === '+') {
         lines[lineNo - 1] = text + '// [!code ++]';
       } else {
@@ -143,6 +153,7 @@ function transformCodeBlock(
     `<code class="language-${shikiLanguage} line-numbers">`,
   );
   codeblock = `${codeblock}${end}`;
+  codeblock = codeblock.replaceAll(EMPTY_LINE_DIFF_PLACEHOLDER, '');
 
   if (attributes['data-filename']) {
     const fileName = attributes['data-filename'] ?? '';

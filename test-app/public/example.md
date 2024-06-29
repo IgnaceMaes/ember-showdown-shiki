@@ -150,3 +150,33 @@ Router.map(function() {
 
 export default Router;
 ```
+
+When diffing an empty line, it should show up correctly:
+
+```typescript {data-filename="app/components/audio-player.ts" data-diff="+5,+6,+7,+8,+9,+10,+11,-12,+13"}
+import Component from "@glimmer/component";
+import { tracked } from "@glimmer/tracking";
+import { action } from "@ember/object";
+
+interface AudioPlayerSignature {
+  Args: {
+    /** The url for the audio to be played */
+    srcUrl: string;
+  };
+}
+
+export default class AudioPlayer extends Component {
+export default class AudioPlayer extends Component<AudioPlayerSignature> {
+  @tracked isPlaying = false;
+
+  @action
+  play() {
+    this.isPlaying = true;
+  }
+
+  @action
+  pause() {
+    this.isPlaying = false;
+  }
+}
+```

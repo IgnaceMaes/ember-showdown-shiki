@@ -7,11 +7,15 @@
 
 pre.shiki {
   border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .shiki code {
   overflow-x: auto;
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 0.75rem 0;
   font-size: 1rem;
   line-height: 1.6;
@@ -134,4 +138,65 @@ code.line-numbers .line::before {
   box-sizing: border-box;
   display: inline-block;
   min-width: 100%;
+}
+
+/* Diff view switcher styles */
+.view-switch-container {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  justify-content: end;
+  z-index: 1;
+}
+
+.view-switcher-label {
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.1s;
+  color: #f4f6f8;
+  background-color: #2b2d34;
+  user-select: none;
+  border-right: 2px solid #2b2d34;
+}
+
+.view-switcher-label:first-of-type {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.view-switcher-label:last-of-type {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-left: 0;
+}
+
+.view-switcher-label:hover {
+  background-color: #42474f;
+}
+
+.view-switcher-label:active {
+  background-color: #42474f;
+}
+
+.view-switcher-input:focus + .view-switcher-label {
+  z-index: 1;
+}
+
+.view-switcher-input:checked + .view-switcher-label {
+  background-color: #42474f;
+}
+
+.view-switcher-input {
+  position: absolute;
+  opacity: 0;
+}
+
+.shiki.has-diff:has(.view-after:checked) .line.diff.remove {
+  display: none;
+}
+
+.shiki.has-diff:has(.view-before:checked) .line.diff.add {
+  display: none;
 }

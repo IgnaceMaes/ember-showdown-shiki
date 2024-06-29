@@ -17,6 +17,8 @@ const CODE_BLOCK_REGEX =
 
 const EMPTY_LINE_DIFF_PLACEHOLDER = 'EMPTY_LINE_DIFF_PLACEHOLDER';
 
+let blockCounter = 0;
+
 /**
  * Creates a Shiki transformer that applies color replacements on the style attribute.
  * @param colorReplacements The color replacements to apply.
@@ -154,6 +156,32 @@ function transformCodeBlock(
   );
   codeblock = `${codeblock}${end}`;
   codeblock = codeblock.replaceAll(EMPTY_LINE_DIFF_PLACEHOLDER, '');
+
+  if (diffInfoArgs) {
+    codeblock = codeblock.replace(
+      '<code',
+      `
+      <div class="view-switch-container">
+        <input class="view-switcher-input view-diff" name="view-switcher-${blockCounter}" type="radio" id="tab-${blockCounter}" checked="checked"/>
+        <label class="view-switcher-label" for="tab-${blockCounter}">Diff</label>
+        <input class="view-switcher-input view-before" name="view-switcher-${blockCounter}" type="radio" id="tab-${
+          blockCounter + 1
+        }" />
+        <label class="view-switcher-label" for="tab-${
+          blockCounter + 1
+        }">Before</label>
+        <input class="view-switcher-input view-after" name="view-switcher-${blockCounter}" type="radio" id="tab-${
+          blockCounter + 2
+        }"/>
+        <label class="view-switcher-label" for="tab-${
+          blockCounter + 2
+        }">After</label>
+      </div>
+      <code
+    `,
+    );
+    blockCounter += 3;
+  }
 
   if (attributes['data-filename']) {
     const fileName = attributes['data-filename'] ?? '';

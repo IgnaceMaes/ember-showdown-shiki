@@ -8,6 +8,13 @@ module.exports = function (defaults) {
     autoImport: {
       watchDependencies: ['ember-showdown-shiki'],
     },
+    '@embroider/macros': {
+      setConfig: {
+        'ember-qunit': {
+          theme: 'ember',
+        },
+      },
+    },
   });
 
   const { maybeEmbroider } = require('@embroider/test-setup');

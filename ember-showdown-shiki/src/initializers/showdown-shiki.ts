@@ -162,16 +162,25 @@ function transformCodeBlock(
       '<code',
       `
       <div class="view-switch-container">
-        <input class="view-switcher-input view-diff" name="tabs" type="radio" id="tab-${++blockCounter}" checked="checked"/>
+        <input class="view-switcher-input view-diff" name="view-switcher-${blockCounter}" type="radio" id="tab-${blockCounter}" checked="checked"/>
         <label class="view-switcher-label" for="tab-${blockCounter}">Diff</label>
-        <input class="view-switcher-input view-before" name="tabs" type="radio" id="tab-${++blockCounter}" />
-        <label class="view-switcher-label" for="tab-${blockCounter}">Before</label>
-        <input class="view-switcher-input view-after" name="tabs" type="radio" id="tab-${++blockCounter}"/>
-        <label class="view-switcher-label" for="tab-${blockCounter}">After</label>
+        <input class="view-switcher-input view-before" name="view-switcher-${blockCounter}" type="radio" id="tab-${
+          blockCounter + 1
+        }" />
+        <label class="view-switcher-label" for="tab-${
+          blockCounter + 1
+        }">Before</label>
+        <input class="view-switcher-input view-after" name="view-switcher-${blockCounter}" type="radio" id="tab-${
+          blockCounter + 2
+        }"/>
+        <label class="view-switcher-label" for="tab-${
+          blockCounter + 2
+        }">After</label>
       </div>
       <code
     `,
     );
+    blockCounter += 3;
   }
 
   if (attributes['data-filename']) {

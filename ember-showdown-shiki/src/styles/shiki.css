@@ -151,7 +151,7 @@ code.line-numbers .line::before {
 }
 
 .view-switcher-label {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
   font-weight: bold;
   transition: background 0.1s;

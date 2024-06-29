@@ -197,19 +197,6 @@ code.line-numbers .line::before {
   display: none;
 }
 
-.shiki.has-diff:has(.view-after:checked) .line.diff.add {
-  background-color: initial;
-  border-left: initial;
-  padding: 0 1rem;
-}
-
 .shiki.has-diff:has(.view-before:checked) .line.diff.add {
   display: none;
-}
-
-.shiki.has-diff:has(.view-before:checked) .line.diff.remove {
-  background-color: initial;
-  border-left: initial;
-  padding: 0 1rem;
-  opacity: initial;
 }

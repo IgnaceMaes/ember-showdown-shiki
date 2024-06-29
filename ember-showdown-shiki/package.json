@@ -1,6 +1,6 @@
 {
   "name": "ember-showdown-shiki",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Adds Shiki syntax highlighting for showdown-based markdown code blocks.",
   "keywords": [
     "ember-addon",

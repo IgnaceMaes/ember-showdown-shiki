@@ -26,7 +26,7 @@ module('Integration | Component | markdown-to-html', function (hooks) {
 
     assert.strictEqual(
       find('div')!.innerHTML.trim(),
-      '<pre class=\"shiki github-dark\" style=\"background-color:#1c1e24;color:#e1e4e8\" tabindex=\"0\"><code class=\"language-js line-numbers\"><span class=\"line\"><span style=\"color:#E1E4E8\">console.</span><span style=\"color:#B392F0\">log</span><span style=\"color:#E1E4E8\">(</span><span style=\"color:#9ECBFF\">\"hello world\"</span><span style=\"color:#E1E4E8\">);</span></span></code></pre>',
+      '<pre class="shiki github-dark" style="background-color:#1c1e24;color:#e1e4e8" tabindex="0"><code class="language-js line-numbers"><span class="line"><span style="color:#E1E4E8">console.</span><span style="color:#B392F0">log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"hello world"</span><span style="color:#E1E4E8">);</span></span></code></pre>',
     );
   });
 });

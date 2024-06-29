@@ -1,5 +1,11 @@
 # ember-showdown-shiki
 
+## 1.2.1
+
+### Patch Changes
+
+- [#40](https://github.com/IgnaceMaes/ember-showdown-shiki/pull/40) [`5b64c0d`](https://github.com/IgnaceMaes/ember-showdown-shiki/commit/5b64c0da3294bf2b97c72c7a4346fecae7b3d707) Thanks [@IgnaceMaes](https://github.com/IgnaceMaes)! - fix: highlight diffs on empty lines correctly
+
 ## 1.2.0
 
 ### Minor Changes
